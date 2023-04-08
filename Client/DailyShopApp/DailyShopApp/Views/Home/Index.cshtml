@@ -1,0 +1,36 @@
+﻿    
+  <!-- Start slider -->
+@await Component.InvokeAsync("Slider")
+  <!-- / slider -->
+  <!-- Start Promo section -->
+@await Component.InvokeAsync("Promo")
+  <!-- / Promo section -->
+  <!-- Products section -->
+  @await Component.InvokeAsync("Products")
+  <!-- / Products section -->
+  <!-- banner section -->
+@await Component.InvokeAsync("Banner")
+  <!-- popular section -->
+@await Component.InvokeAsync("Popular")
+  <!-- / popular section -->
+  <!-- Support section -->
+@await Component.InvokeAsync("Support")
+  <!-- / Support section -->
+  <!-- Testimonial -->
+  <!-- / Testimonial -->
+
+  <!-- Latest Blog -->
+ 
+  @await Component.InvokeAsync("Blogs")
+  <!-- / Latest Blog -->
+
+  <!-- Client Brand -->
+<partial name="Partials/_ClientBrand" />
+  <!-- / Client Brand -->
+
+  <!-- Subscribe section -->
+<partial name="Partials/_Subscribe" />
+  <!-- / Subscribe section -->
+
+
+

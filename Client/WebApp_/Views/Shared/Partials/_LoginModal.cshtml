@@ -1,0 +1,29 @@
+﻿@using WebApp_.VM;
+@model HomeVM
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+               
+                <div class="aa-myaccount-login">
+                    <h4>Login</h4>
+                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                    <form asp-controller="Auth" asp-action="SignIn" method="post">
+                        <label asp-for="SigninInput.Email"> Email address<span>*</span></label>
+                        <input class="form-control" type="email" value="huseyn@gmail.com" asp-for="SigninInput.Email">
+                        <span class="text-danger" asp-validation-for="SigninInput.Email"></span>
+
+                        <label asp-for="SigninInput.Password" for="exampleInputPassword1" class="form-label"></label>
+                        <input type="password" value="User@1234" asp-for="SigninInput.Password" class="form-control" id="exampleInputPassword1">
+                        <span class="text-danger" asp-validation-for="SigninInput.Password"></span>
+                        <input type="checkbox" asp-for="SigninInput.RememberMe" class="form-check-input" id="exampleCheck1">
+                        <label asp-for="SigninInput.RememberMe" class="form-check-label" for="exampleCheck1"></label>
+                        <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+                        <button type="submit" class="aa-browse-btn">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
